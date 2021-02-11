@@ -1,13 +1,6 @@
 def countSegments(s):
-	if not s:
-		return 0
-	space_counter = 0
-	for character in s:
-		if(character == " "):
-			space_counter += 1
-	if(space_counter >= 0):
-		space_counter += 1
-	return space_counter
+	return len([i for i in s.strip().split(' ') if i])
+
 
 def main():
 	print(countSegments("Hello, my name is John"))
